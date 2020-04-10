@@ -1,0 +1,117 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    background: url('https://i.picsum.photos/id/110/5616/3744.jpg') no-repeat center;
+    background-size: cover;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;    
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.timer {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.controls {
+    display: flex;  
+}
+
+.controls > * {
+    flex: 1;
+}
+
+#custom {
+    flex: 1;
+    display: flex;
+}
+
+#custom input {
+    flex: 1;
+    border: 0;
+    padding: 1rem;
+    background-color: lightgray;
+    border-bottom: 3px solid rgba(48, 47, 47, 0.808);
+}
+
+input,
+#custom input::placeholder {
+    font-size: 2rem;    
+}
+
+.button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.1);
+    border-bottom: 3px solid rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0,0,0,0.2);
+    padding: 1rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.button:hover,
+.button:focus {
+    font-weight: bold;
+    color: black;
+    background: rgba(0,0,0,0.2);
+    outline: 0;
+}
+
+.display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.time-left {
+    font-weight: 100;
+    font-size: 23vh;
+    margin: 0;
+    text-shadow: 4px 4px 0 rgba(0,0,0,0.05);
+}
+
+.end-time {
+    font-size: 5vh;
+}
+
+#btn {
+    padding-top: 1.5%;
+}
+
+.pause {
+    border: 0;
+    width: fit-content;
+    border-radius:8px;
+    cursor: pointer;
+    color: white;
+    font-size: 2.8vh;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(30, 30, 30, 0.7);
+    border-bottom: 3px solid rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0,0,0,0.2);
+    padding: 2vh 2vw;
+    font-family: 'Roboto Mono', monospace;
+}
+.pause:hover {
+    font-weight: bold;
+    color: white;
+    background: rgba(0,0,0,0.75);
+    outline: 0;
+}
+
