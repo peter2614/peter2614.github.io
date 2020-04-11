@@ -7,10 +7,12 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
 body {
+    width: 100%;
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
+    overflow-x: hidden;
 }
 
 /* Covers everything */
@@ -379,7 +381,7 @@ a:focus, a:hover {
 }
 
 .container-row {
-    margin-right: -15px;
+    /* margin-right: -15px; */
     display: flex;
 }
 
@@ -680,7 +682,7 @@ footer {
         flex: 0;
         /* max-width: 650px; */
         /* width: 500px; */
-        width: 80vw;
+        width: 90vw;
         display: flex;
         justify-content: center;
     }
@@ -747,13 +749,17 @@ footer {
     .project-content {
         padding: 30px 25px 25px 25px;
         transition: all .5s ease 0s;
-        width: 70vw;
+        width: 90vw;
         margin: auto;
     }
 
     /* Project Section ::after */
     .project-title h3::after {
         display: none;
+    }
+
+    .menu-row {
+        margin: 50px 0 10px 0;
     }
 }
 
@@ -786,12 +792,14 @@ footer {
     }
 
     #education .content {
-        width: 80vw;
+        width: 90vw;
         margin: auto;
+        max-width: 500px;
     }
 
     #experience .content {
-        width:70vw;
+        width:90vw;
         margin: auto;
+        max-width: 680px;
     }
 }
