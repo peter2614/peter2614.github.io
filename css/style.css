@@ -680,7 +680,7 @@ footer {
         flex: 0;
         /* max-width: 650px; */
         /* width: 500px; */
-        width: 60vw;
+        width: 80vw;
         display: flex;
         justify-content: center;
     }
@@ -690,7 +690,7 @@ footer {
         flex-direction: column;
     }
     #description > * {
-        width: 55vw;
+        width: 70vw;
     }
 
     .about-content {
@@ -786,7 +786,7 @@ footer {
     }
 
     #education .content {
-        width: 50vw;
+        width: 80vw;
         margin: auto;
     }
 

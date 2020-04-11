@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 10px;
-    background: url("/projects/Countdown\ Timer/ /projects/Countdown\ Timer/img/background.jpg") no-repeat center;
+    background: url('/projects/Countdown\ Timer/img/background.jpg') no-repeat center;
     background-size: cover;
 }
 
