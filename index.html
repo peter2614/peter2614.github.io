@@ -6,6 +6,8 @@
     <meta name="description" content="Personal Website">
     <meta name="author" content="Peter Pi">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <title>Peter Pi</title>
 </head>
 <body>
@@ -22,7 +24,9 @@
                     <li><a href="#education">Education</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#project">Project</a></li>
-                
+                    <a href="javascript:void(0);" class="bar-icon" onclick="displayDropdown()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </ul>
             </nav>
         </header>
@@ -54,7 +58,7 @@
                                 <p><b>Programming Language:</b> C++, HTML, CSS, Javascript, SQL, Java, C#, Python, C</p>
                                 <p><b>Tools:</b> Visual Studio, Microsoft SQL Server, Team Foundation Server, Git, mySQL, Vim, Android Studio</p>
                                 <p><b>Frameworks/Libraries/Technologies:</b> AngularJS, jQuery, Node.js, Express, ASP.NET, RESTful Web Services, Bootstrap, React</p>
-                                <a href="resume/Peter_Pi_Resume.pdf" download class="download-btn">download resume</a>
+                                <p id="download-resume"><a href="resume/Peter_Pi_Resume.pdf" download class="download-btn">download resume</a></p>
                             </div>
                         </div>
                     </div>
@@ -158,105 +162,107 @@
         </section>
 
         <section id="project">
-            <div class="menu-row">
-                <div class="project-title">
-                    <h3>Project Work</h3>
-                </div>
-
-                <div class="menu-container">
-                    <div class="project-menu">
-                        <ul class="menu-list">
-                            <li class="active">All</li>
-                            <li>Website</li>
-                            <li>IoT</li>
-                            <li>Android</li>
-                            <li>Chrome Extension</li>
-                            <li>Web Component</li>
-                        </ul>
+            <div class="project-container">
+                <div class="menu-row">
+                    <div class="project-title">
+                        <h3>Project Work</h3>
                     </div>
-                </div>
-            </div>
 
-            <div class="project-row">
-                <div class="project-row-size">
-                    <div class="project-content">
-                        <a href="projects/Countdown Timer/index.html" rel="noopener noreferrer" target="_blank">
-                            <img src="img/projects/Countdown Timer.png" alt="Countdown Timer Image">
-                        </a>
-                        <h3>
-                            <a href="projects/Countdown Timer/index.html" rel="noopener noreferrer" target="_blank">Countdown Timer</a>
-                        </h3>
-                        <p><b>Personal Project</b> - Chrome Extension that automatically blocks popup and pre-roll ads prior to the actual video content</p>
-                        <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                    <div class="menu-container">
+                        <div class="project-menu">
+                            <ul class="menu-list">
+                                <li class="active">All</li>
+                                <li>Website</li>
+                                <li>IoT</li>
+                                <li>Android</li>
+                                <li>Chrome Extension</li>
+                                <li>Web Component</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-row-size">
-                    <div class="project-content">
-                        <a href="projects/Keyboard Drum Kit/index.html" rel="noopener noreferrer" target="_blank">
-                            <img src="img/projects/Keyboard Drum Kit.png" alt="Drum Kit Image">
-                        </a>
-                        <h3>
-                            <a href="projects/Keyboard Drum Kit/index.html" rel="noopener noreferrer" target="_blank">Keyboard Drum Kit</a>
-                        </h3>
-                        <p><b>Personal Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
-                        <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                <div class="project-row">
+                    <div class="project-row-size">
+                        <div class="project-content">
+                            <a href="projects/Countdown Timer/index.html" rel="noopener noreferrer" target="_blank">
+                                <img src="img/projects/Countdown Timer.png" alt="Countdown Timer Image">
+                            </a>
+                            <h3>
+                                <a href="projects/Countdown Timer/index.html" rel="noopener noreferrer" target="_blank">Countdown Timer</a>
+                            </h3>
+                            <p><b>Personal Project</b> - Chrome Extension that automatically blocks popup and pre-roll ads prior to the actual video content</p>
+                            <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="project-row">
-                <div class="project-row-size">
-                    <div class="project-content">
-                        <a href="projects/Issue Tracker/index.html" rel="noopener noreferrer" target="_blank">
-                            <img src="img/projects/Issue Tracker.png" alt="Issue Tracker Image">
-                        </a>
-                        <h3>
-                            <a href="projects/Issue Tracker/index.html" rel="noopener noreferrer" target="_blank">Issue Tracker</a>
-                        </h3>
-                        <p><b>Personal Project</b> - Chrome Extension that automatically blocks popup and pre-roll ads prior to the actual video content</p>
-                        <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
-                    </div>
-                </div>
-
-                <div class="project-row-size">
-                    <div class="project-content">
-                        <a href="https://trytonsplan.herokuapp.com/" rel="noopener noreferrer" target="_blank">
-                            <img src="img/projects/TrytonsPlan.png" alt="TrytonsPlan Image">
-                        </a>
-                        <h3>
-                            <a href="https://trytonsplan.herokuapp.com/" rel="noopener noreferrer" target="_blank">TrytonsPlan</a>
-                        </h3>
-                        <p><b>Group Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
-                        <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-row">
-                <div class="project-row-size">
-                    <div class="project-content">
-                        <a href="https://chrome.google.com/webstore/detail/ad-blocker-for-youtube/gmcmlgfecmkefmkgbbnggmamclbmikbi" rel="noopener noreferrer" target="_blank">
-                            <img src="img/projects/YouTube Ad Blocker.png" alt="YouTube Ad Blocker Image">
-                        </a>
-                        <h3>
-                            <a href="https://chrome.google.com/webstore/detail/ad-blocker-for-youtube/gmcmlgfecmkefmkgbbnggmamclbmikbi" rel="noopener noreferrer" target="_blank">YouTube Ad Blocker</a>
-                        </h3>
-                        <p><b>Personal Project</b> - Chrome Extension that automatically blocks popup and pre-roll ads prior to the actual video content</p>
-                        <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                    <div class="project-row-size">
+                        <div class="project-content">
+                            <a href="projects/Keyboard Drum Kit/index.html" rel="noopener noreferrer" target="_blank">
+                                <img src="img/projects/Keyboard Drum Kit.png" alt="Drum Kit Image">
+                            </a>
+                            <h3>
+                                <a href="projects/Keyboard Drum Kit/index.html" rel="noopener noreferrer" target="_blank">Keyboard Drum Kit</a>
+                            </h3>
+                            <p><b>Personal Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
+                            <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-row-size">
-                    <div class="project-content">
-                        <a href="" rel="noopener noreferrer" target="_blank">
-                            <img src="img/projects/Instant Dictionary.png" alt="Instant Dictionary Image">
-                        </a>
-                        <h3>
-                            <a href="" rel="noopener noreferrer" target="_blank">Instant Dictionary</a>
-                        </h3>
-                        <p><b>Personal Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
-                        <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                <div class="project-row">
+                    <div class="project-row-size">
+                        <div class="project-content">
+                            <a href="projects/Issue Tracker/index.html" rel="noopener noreferrer" target="_blank">
+                                <img src="img/projects/Issue Tracker.png" alt="Issue Tracker Image">
+                            </a>
+                            <h3>
+                                <a href="projects/Issue Tracker/index.html" rel="noopener noreferrer" target="_blank">Issue Tracker</a>
+                            </h3>
+                            <p><b>Personal Project</b> - Chrome Extension that automatically blocks popup and pre-roll ads prior to the actual video content</p>
+                            <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+
+                    <div class="project-row-size">
+                        <div class="project-content">
+                            <a href="https://trytonsplan.herokuapp.com/" rel="noopener noreferrer" target="_blank">
+                                <img src="img/projects/TrytonsPlan.png" alt="TrytonsPlan Image">
+                            </a>
+                            <h3>
+                                <a href="https://trytonsplan.herokuapp.com/" rel="noopener noreferrer" target="_blank">TrytonsPlan</a>
+                            </h3>
+                            <p><b>Group Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
+                            <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-row-size">
+                        <div class="project-content">
+                            <a href="https://chrome.google.com/webstore/detail/ad-blocker-for-youtube/gmcmlgfecmkefmkgbbnggmamclbmikbi" rel="noopener noreferrer" target="_blank">
+                                <img src="img/projects/YouTube Ad Blocker.png" alt="YouTube Ad Blocker Image">
+                            </a>
+                            <h3>
+                                <a href="https://chrome.google.com/webstore/detail/ad-blocker-for-youtube/gmcmlgfecmkefmkgbbnggmamclbmikbi" rel="noopener noreferrer" target="_blank">YouTube Ad Blocker</a>
+                            </h3>
+                            <p><b>Personal Project</b> - Chrome Extension that automatically blocks popup and pre-roll ads prior to the actual video content</p>
+                            <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+
+                    <div class="project-row-size">
+                        <div class="project-content">
+                            <a href="" rel="noopener noreferrer" target="_blank">
+                                <img src="img/projects/Instant Dictionary.png" alt="Instant Dictionary Image">
+                            </a>
+                            <h3>
+                                <a href="" rel="noopener noreferrer" target="_blank">Instant Dictionary</a>
+                            </h3>
+                            <p><b>Personal Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
+                            <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -279,6 +285,31 @@
         const project = document.querySelector('#project');
 
         const li = document.body.querySelectorAll(".menu li");
+        const responsiveNavbar = document.body.querySelectorAll(".menu > *");
+
+        window.addEventListener('resize', () => {
+            if(window.innerWidth <= 1200) {
+                console.log('in')
+            //     responsiveNavbar.forEach((node) => {
+            //         if(node.classList.value === 'bar-icon' || node.classList.value === 'current') {
+            //             node.style.display = 'flex';
+            //         }
+            //         else {
+            //             node.style.display = 'none';
+            //         }
+            //     });
+            // }
+            // else {
+            //     responsiveNavbar.forEach((node) => {
+            //         if(node.classList.value === 'bar-icon' || node.classList.value === 'current') {
+            //             node.style.display = 'none';
+            //         }
+            //         else {
+            //             node.style.display = 'flex';
+            //         }
+            //     });
+            }
+        });
 
         window.addEventListener('scroll', () => {
             if(window.scrollY >= bottomOfNav) {

@@ -1,7 +1,3 @@
-.well {
-    background-color: lightblue;
-}
-
 .container {
     display: flex;
     flex-direction: column;

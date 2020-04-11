@@ -33,6 +33,7 @@ img {
     width: 130px;
 }
 
+/* Navbar when scroll down */
 .fixed-nav .navbar {
     position: fixed;
     top: 20vh;
@@ -75,6 +76,11 @@ img {
 .fixed-nav .navbar .current a {
     color: #fff;
     text-shadow: none;
+}
+
+/* Navbar when screen size less than 1200px */
+.bar-icon {
+    display: none;
 }
 
 /* Header Section */
@@ -142,7 +148,6 @@ a[ id= "contacto" ]:target ~ #main article.panel {
     text-align: left;
     font-weight: 700;
     padding-top: 30px;
-    display: block;
     padding-bottom: 5px;
 }
 
@@ -215,6 +220,7 @@ li > a {
 
 /* About Me Section */
 #me {
+    display: flex;
     background: #fafafa;
     padding: 80px 0;
 }
@@ -238,23 +244,15 @@ a, button, input {
 .about-size {
     flex: 1;
     margin: 0 auto;
-    position: relative;
+    /* position: relative; */
     padding: 0 15px;    
 }
 
 .about-image {
-    position: relative;
+    /* position: relative; */
     /* box-shadow: 0 0 9px 1px rgba(17,17,17,.3); */
     border-radius: 2px;
-}
-
-.about-image:after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
+    width: 350px;
 }
 
 /* #profile_pic {
@@ -264,7 +262,7 @@ a, button, input {
 } */
 
 #profile_pic > img{
-    width: 60%;
+    width: 100%;
 }
 
 /* #description {
@@ -295,7 +293,7 @@ a, button, input {
     letter-spacing: 3px;
     padding-bottom: 15px;
     margin-bottom: 15px;
-    position: relative;
+    /* position: relative; */
 }
 
 
@@ -325,7 +323,7 @@ p.bold {
     margin-top: 45px;
     overflow: hidden;
     padding: 12px 42px;
-    position: relative;
+    /* position: relative; */
     text-transform: uppercase;
     z-index: 9;
     background: #fff;
@@ -351,15 +349,24 @@ a:focus, a:hover {
 }
 
 #education,
-#experience {
+#experience,
+#project {
+    display: flex;
     background-color: #f1f1f1;
     padding: 20px 0;
 }
 
-#about-me,
+#about-me {
+    width: 1000px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .education-container, 
 .experience-container,
-#project {
+.project-container {
     width: 1170px;
     padding-right: 15px;
     padding-left: 15px;
@@ -382,10 +389,8 @@ a:focus, a:hover {
 
 /* for most of the content class except for eduaction section */
 .content {
-    /* flex: 1 1 40%;
     display: flex;
     flex-direction: column;
-    padding: 10px 50px; */
     padding: 30px 25px 25px 25px;
     /* -webkit-transition: all 0.5s ease 0s; */
     transition: all .5s ease 0s;
@@ -397,7 +402,6 @@ a:focus, a:hover {
 
 .content-icon {
     margin-bottom: 27px;
-    width: 80px;
 }
 
 ::after, ::before, a, button, i, img, input, span {
@@ -469,9 +473,7 @@ a:focus, a:hover {
 }
 
 .project-title {
-    flex: 1 1;
-    float: left;
-    position: relative;
+    flex: 1;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
@@ -482,23 +484,19 @@ a:focus, a:hover {
     color: #555;
     font-weight: 700;
     text-transform: uppercase;
-    position: relative;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 .project-title h3::after {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: url('../img/icon/title.png');
-    width: 100px;
+    display: block;
+    background: url(../img/icon/title.png) no-repeat;
     height: 5px;
     content: "";
+    margin-top: 20px;
 }
 
 .menu-container {
-    flex: 2 1;
+    flex: 2;
 }
 
 .project-menu {
@@ -551,7 +549,7 @@ a:focus, a:hover {
 }
 
 .project-content {
-    height: 550px;
+    /* height: 550px; */
     padding: 30px 25px 25px 25px;
     /* box-shadow: 0px 6px 15px 0px rgba(59, 59, 59, 0.21); */
     transition: all .5s ease 0s;
@@ -611,15 +609,192 @@ footer {
     font-size: 1.1rem;
 }
 
+@media screen and (max-width: 1530px) {
+    /* Change floating navbar to smaller icon with drop down */
+    /* .navbar {
+        width: 50px;
+    } */
 
+    /* .fixed-nav .navbar a {
+        font-size: 30px;
+        padding: 0;
+    }
 
+    .fixed-nav .navbar ul {
+        width: 100%;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
 
-/* removeeeeeeeeeeeeeeeeeeeeeee */
-/* removeeeeeeeeeeeeeeeeeeeeeee */
-/* removeeeeeeeeeeeeeeeeeeeeeee */
-/* removeeeeeeeeeeeeeeeeeeeeeee */
-/* removeeeeeeeeeeeeeeeeeeeeeee */
-/* removeeeeeeeeeeeeeeeeeeeeeee */
-/* removeeeeeeeeeeeeeeeeeeeeeee */
-/* removeeeeeeeeeeeeeeeeeeeeeee */
-/* removeeeeeeeeeeeeeeeeeeeeeee */
+    .fixed-nav .navbar ul > a.bar-icon {
+        text-align: right;
+        padding: 0 25px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .fixed-nav .navbar ul li {
+        padding: 0 25px;
+        height: 100%;
+    }
+
+    .current {
+        display: flex;
+        align-items: center;
+    }
+
+    ul.menu > a.bar-icon {
+        display: none;
+    } 
+
+    .fixed-nav .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        background-color: rgba(52, 53, 55, 0.8);
+        border-radius: 0;
+    } */
+}
+
+@media screen and (max-width: 1200px) {
+    /* Navbar */
+    ul.menu li:not(:first-child) {
+        display: none;
+    }
+
+    .fixed-nav .navbar a {
+        font-size: 30px;
+        padding: 0;
+    }
+
+    .fixed-nav .navbar ul {
+        width: 100%;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .fixed-nav .navbar ul > a.bar-icon {
+        text-align: right;
+        padding: 0 25px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .fixed-nav .navbar ul li {
+        padding: 0 25px;
+        height: 100%;
+    }
+
+    /* might have to change */
+    .current {
+        display: flex;
+        align-items: center;
+    }
+
+    .bar-icon {
+        display: block;
+    }
+
+    .fixed-nav .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        background-color: rgba(52, 53, 55, 0.8);
+        border-radius: 0;
+    }
+
+    /* About me Section */
+    #me {
+        display: flex;
+    }
+
+    .about-size {
+        flex: 0;
+        max-width: 650px;
+        /* width: 500px; */
+    }
+
+    .about-content {
+        padding-top: 50px;
+    } 
+
+    .about-content h3 {
+        text-align: center;
+    }
+
+    #download-resume {
+        text-align: center;
+    }
+
+    .about-row {
+        /* Supporting multiple device size */
+        flex-direction: column;
+
+        /* flex-wrap: wrap; */
+        max-width: 1200px;
+    }
+
+    /* Project Section */
+    .menu-row {
+        flex-direction: column;
+    }
+
+    .project-title {
+        padding: 0;
+    }
+
+    .project-title h3 {
+        margin: 0;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .project-menu ul {
+        text-align: center;
+    }
+
+    .project-menu ul li {
+        margin-right: 20px;
+    }
+
+    .project-row {
+        flex-direction: column;
+    }
+
+    .project-row-size {
+        margin: 2% 11%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25px;
+    }
+
+    .container-row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row-size {
+        /* flex: 0; */
+        width: 500px;
+    }
+}
