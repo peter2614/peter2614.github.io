@@ -692,11 +692,12 @@ footer {
         flex-direction: column;
     }
     #description > * {
-        width: 70vw;
+        /* width: 70vw; */
     }
 
     .about-content {
         padding-top: 50px;
+        max-width: 680px;
     } 
 
     .about-content h3 {
@@ -749,7 +750,7 @@ footer {
     .project-content {
         padding: 30px 25px 25px 25px;
         transition: all .5s ease 0s;
-        width: 90vw;
+        width: 80vw;
         margin: auto;
     }
 

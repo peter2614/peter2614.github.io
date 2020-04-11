@@ -61,27 +61,27 @@ function startTimer() {
 
 function randomSound(){
     let rand = [
-        '/projects/Countdown Timer/sound/alarm1.mp3',
-        '/projects/Countdown Timer/sound/alarm2.mp3',
-        '/projects/Countdown Timer/sound/alarm3.mp3',
-        '/projects/Countdown Timer/sound/alarm4.mp3',
-        '/projects/Countdown Timer/sound/alarm5.mp3',
-        '/projects/Countdown Timer/sound/alarm6.mp3',
-        '/projects/Countdown Timer/sound/alarm7.mp3',
-        '/projects/Countdown Timer/sound/alarm8.mp3',
-        '/projects/Countdown Timer/sound/alarm9.mp3',
-        '/projects/Countdown Timer/sound/alarm10.mp3',
-        '/projects/Countdown Timer/sound/alarm11.mp3',
-        '/projects/Countdown Timer/sound/alarm12.mp3',
-        '/projects/Countdown Timer/sound/alarm13.mp3',
-        '/projects/Countdown Timer/sound/alarm14.mp3',
-        '/projects/Countdown Timer/sound/alarm15.mp3',
-        '/projects/Countdown Timer/sound/alarm16.mp3',
-        '/projects/Countdown Timer/sound/alarm17.mp3',
-        '/projects/Countdown Timer/sound/alarm18.mp3',
-        '/projects/Countdown Timer/sound/alarm19.mp3',
-        '/projects/Countdown Timer/sound/alarm20.mp3',
-        '/projects/Countdown Timer/sound/alarm21.mp3'
+        '/projects/Countdown-Timer/sound/alarm1.mp3',
+        '/projects/Countdown-Timer/sound/alarm2.mp3',
+        '/projects/Countdown-Timer/sound/alarm3.mp3',
+        '/projects/Countdown-Timer/sound/alarm4.mp3',
+        '/projects/Countdown-Timer/sound/alarm5.mp3',
+        '/projects/Countdown-Timer/sound/alarm6.mp3',
+        '/projects/Countdown-Timer/sound/alarm7.mp3',
+        '/projects/Countdown-Timer/sound/alarm8.mp3',
+        '/projects/Countdown-Timer/sound/alarm9.mp3',
+        '/projects/Countdown-Timer/sound/alarm10.mp3',
+        '/projects/Countdown-Timer/sound/alarm11.mp3',
+        '/projects/Countdown-Timer/sound/alarm12.mp3',
+        '/projects/Countdown-Timer/sound/alarm13.mp3',
+        '/projects/Countdown-Timer/sound/alarm14.mp3',
+        '/projects/Countdown-Timer/sound/alarm15.mp3',
+        '/projects/Countdown-Timer/sound/alarm16.mp3',
+        '/projects/Countdown-Timer/sound/alarm17.mp3',
+        '/projects/Countdown-Timer/sound/alarm18.mp3',
+        '/projects/Countdown-Timer/sound/alarm19.mp3',
+        '/projects/Countdown-Timer/sound/alarm20.mp3',
+        '/projects/Countdown-Timer/sound/alarm21.mp3'
     ];
 
     let randSound = rand[Math.floor(Math.random() * rand.length)];
