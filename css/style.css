@@ -252,7 +252,7 @@ a, button, input {
     /* position: relative; */
     /* box-shadow: 0 0 9px 1px rgba(17,17,17,.3); */
     border-radius: 2px;
-    width: 350px;
+    max-width: 350px;
 }
 
 /* #profile_pic {
@@ -678,8 +678,19 @@ footer {
 
     .about-size {
         flex: 0;
-        max-width: 650px;
+        /* max-width: 650px; */
         /* width: 500px; */
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    #description {
+        display: flex;
+        flex-direction: column;
+    }
+    #description > * {
+        width: 55vw;
     }
 
     .about-content {
@@ -699,7 +710,7 @@ footer {
         flex-direction: column;
 
         /* flex-wrap: wrap; */
-        max-width: 1200px;
+        /* max-width: 1200px; */
     }
 
     /* Project Section */
@@ -730,7 +741,14 @@ footer {
     }
 
     .project-row-size {
-        margin: 2% 12%;
+        /* margin: 2% 12%; */
+    }
+
+    .project-content {
+        padding: 30px 25px 25px 25px;
+        transition: all .5s ease 0s;
+        width: 70vw;
+        margin: auto;
     }
 
     /* Project Section ::after */
@@ -755,8 +773,8 @@ footer {
     }
     
     .row-size {
-        /* flex: 0; */
-        width: 500px;
+        flex: 0;
+        /* width: 500px; */
     }
 
 
@@ -765,5 +783,15 @@ footer {
         width: 100vw;
         padding-right: 15px;
         padding-left: 15px;
+    }
+
+    #education .content {
+        width: 50vw;
+        margin: auto;
+    }
+
+    #experience .content {
+        width:70vw;
+        margin: auto;
     }
 }
