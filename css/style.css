@@ -94,7 +94,7 @@ img {
 }
 
 .header-nav > * {
-    flex: 1;
+    /* flex: 1; */
 }
 
 #branding {
@@ -349,10 +349,14 @@ a:focus, a:hover {
 }
 
 #education,
-#experience,
-#project {
+#experience {
     display: flex;
     background-color: #f1f1f1;
+    padding: 20px 0;
+}
+
+#project {
+    display: flex;
     padding: 20px 0;
 }
 
@@ -594,9 +598,6 @@ a:focus, a:hover {
     /* transform: scale(1.2); */
 }
 
-
-
-
 /* Footer */
 footer {
     margin-top: 50px;
@@ -609,73 +610,20 @@ footer {
     font-size: 1.1rem;
 }
 
-@media screen and (max-width: 1530px) {
-    /* Change floating navbar to smaller icon with drop down */
-    /* .navbar {
-        width: 50px;
-    } */
-
-    /* .fixed-nav .navbar a {
-        font-size: 30px;
-        padding: 0;
-    }
-
-    .fixed-nav .navbar ul {
-        width: 100%;
-        height: 60px;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    .fixed-nav .navbar ul > a.bar-icon {
-        text-align: right;
-        padding: 0 25px;
-        height: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .fixed-nav .navbar ul li {
-        padding: 0 25px;
-        height: 100%;
-    }
-
-    .current {
-        display: flex;
-        align-items: center;
-    }
-
-    ul.menu > a.bar-icon {
-        display: none;
-    } 
-
-    .fixed-nav .navbar {
-        position: fixed;
-        top: 0;
-        right: 0;
-        display: block;
-        width: 100%;
-        background-color: rgba(52, 53, 55, 0.8);
-        border-radius: 0;
-    } */
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1480px) {
     /* Navbar */
     ul.menu li:not(:first-child) {
         display: none;
     }
 
     .fixed-nav .navbar a {
-        font-size: 30px;
+        font-size: 20px;
         padding: 0;
     }
 
     .fixed-nav .navbar ul {
         width: 100%;
-        height: 60px;
+        height: 6vh;
         justify-content: center;
         align-items: center;
         flex-direction: row;
@@ -691,8 +639,14 @@ footer {
     }
 
     .fixed-nav .navbar ul li {
-        padding: 0 25px;
+        padding: 15px;
         height: 100%;
+    }
+
+    a.bar-icon i {
+        width: fit-content;
+        height: fit-content;
+        align-self: center;
     }
 
     /* might have to change */
@@ -702,7 +656,7 @@ footer {
     }
 
     .bar-icon {
-        display: block;
+        display: flex;
     }
 
     .fixed-nav .navbar {
@@ -714,7 +668,9 @@ footer {
         background-color: rgba(52, 53, 55, 0.8);
         border-radius: 0;
     }
+}
 
+@media screen and (max-width: 1200px) {
     /* About me Section */
     #me {
         display: flex;
@@ -774,7 +730,12 @@ footer {
     }
 
     .project-row-size {
-        margin: 2% 11%;
+        margin: 2% 12%;
+    }
+
+    /* Project Section ::after */
+    .project-title h3::after {
+        display: none;
     }
 }
 
@@ -796,5 +757,13 @@ footer {
     .row-size {
         /* flex: 0; */
         width: 500px;
+    }
+
+
+    /* Container width for each section */
+    .education-container, .experience-container, .project-container {
+        width: 100vw;
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }
