@@ -19,14 +19,17 @@
 
             <nav class="navbar">
                 <ul class="menu" id="responsive-menu">
-                    <a href="javascript:void(0);" class="bar-icon" onclick="displayDropdown()">
+                    <!-- <a href="javascript:void(0);" class="bar-icon" onclick="displayDropdown()">
                         <i class="fa fa-bars"></i>
-                    </a>
+                    </a> -->
                     <li class="current"><a href="#cover">Home</a></li>
                     <li><a href="#me">About</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#project">Project</a></li>
+                    <a href='#cover' class="scroll-to-top">
+                        <i class="fa fa-arrow-up"></i>
+                    </a>
                 </ul>
             </nav>
         </header>
@@ -356,27 +359,27 @@
                         <div class="social">
                             <ul>
                                 <li>
-                                    <a href="">
+                                    <a href="mailto:peterp7799@gmail.com">
                                         <i class="fa fa-envelope"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="https://www.linkedin.com/in/peter-pi">
                                         <i class="fa fa-linkedin"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="https://github.com/peter2614">
                                         <i class="fa fa-github"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="https://www.facebook.com/peter.piii">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="https://www.instagram.com/peterpiie/">
                                         <i class="fa fa-instagram"></i>
                                     </a>
                                 </li>
@@ -386,7 +389,6 @@
                 </div>
             </div>
         </section>
-
         <footer>
             <p>&copy 2020 Peter Pi</p>
         </footer>
@@ -407,30 +409,41 @@
         const responsiveNavbar = document.body.querySelectorAll(".menu > *");
 
         // Responsive Navbar 
+        // window.addEventListener('resize', () => {
+        //     if(window.innerWidth <= 1480 && window.scrollY >= bottomOfNav) {
+        //         responsiveNavbar.forEach((node) => {
+        //             if(node.classList.value === 'bar-icon' || node.classList.value === 'current') {
+        //                 node.style.display = 'flex';
+        //                 // node.style.visibility = 'visible';
+        //             }
+        //             else {
+        //                 node.style.display = 'none';
+        //                 // node.style.visibility = 'hidden';
+        //             }
+        //         });
+        //     }
+        //     else {
+        //         responsiveNavbar.forEach((node) => {
+        //             if(node.classList.value === 'bar-icon') {
+        //                 node.style.display = 'none';
+        //                 // node.style.visibility = 'hidden';
+        //             }
+        //             else {
+        //                 node.style.display = 'flex';
+        //                 // node.style.visibility = 'visible';
+        //             }
+        //         });
+        //     }
+        // });
+
         window.addEventListener('resize', () => {
-            if(window.innerWidth <= 1480 && window.scrollY >= bottomOfNav) {
-                responsiveNavbar.forEach((node) => {
-                    if(node.classList.value === 'bar-icon' || node.classList.value === 'current') {
-                        node.style.display = 'flex';
-                        // node.style.visibility = 'visible';
-                    }
-                    else {
-                        node.style.display = 'none';
-                        // node.style.visibility = 'hidden';
-                    }
-                });
+            if(window.innerWidth <= 1485 && window.scrollY >= bottomOfNav) {
+                // document.body.classList.remove('fixed-nav');
+                // document.body.classList.add('scroll-to-top');
             }
             else {
-                responsiveNavbar.forEach((node) => {
-                    if(node.classList.value === 'bar-icon') {
-                        node.style.display = 'none';
-                        // node.style.visibility = 'hidden';
-                    }
-                    else {
-                        node.style.display = 'flex';
-                        // node.style.visibility = 'visible';
-                    }
-                });
+                // document.body.classList.add('fixed-nav');
+                // document.body.classList.remove('scroll-to-top');
             }
         });
 
@@ -438,32 +451,32 @@
         window.addEventListener('scroll', () => {
             if(window.scrollY >= bottomOfNav) {
                 document.body.classList.add('fixed-nav');
-                if(window.innerWidth <= 1480) {
-                    responsiveNavbar.forEach((node) => {
-                        if(node.classList.value === 'bar-icon' || node.classList.value === 'current') {
-                            node.style.display = 'flex';
-                            // node.style.visibility = 'visible';
-                        }
-                        else {
-                            node.style.display = 'none';
-                            // node.style.visibility = 'hidden';
-                        }
-                    });
-                }
+                document.body.classList.add('scroll-to-top');
+                // if(window.innerWidth <= 1480) {
+                //     responsiveNavbar.forEach((node) => {
+                //         if(node.classList.value === 'bar-icon' || node.classList.value === 'current') {
+                //             node.style.display = 'flex';
+                //         }
+                //         else {
+                //             node.style.display = 'none';
+                //         }
+                //     });
+                // }
             }
             else {
-                // document.body.paddingTop = 0;
                 document.body.classList.remove('fixed-nav');
-                responsiveNavbar.forEach((node) => {
-                    if(node.classList.value === 'bar-icon') {
-                        node.style.display = 'none';
-                        // node.style.visibility = 'hidden';
-                    }
-                    else {
-                        node.style.display = 'flex';
-                        // node.style.visibility = 'visible';
-                    }
-                });
+                document.body.classList.remove('scroll-to-top');
+                // let scrollToTop = document.querySelector('ul.menu > a');
+                // console.log(scrollToTop)
+                // scrollToTop.style.display = 'none';
+                // responsiveNavbar.forEach((node) => {
+                //     if(node.classList.value === 'bar-icon') {
+                //         node.style.display = 'none';
+                //     }
+                //     else {
+                //         node.style.display = 'flex';
+                //     }
+                // });
             }
 
             // update navbar highlight as user scroll
@@ -498,22 +511,22 @@
             }
         });
 
-        function displayDropdown() {
-            let x = document.getElementById('responsive-menu');
-            let lists = document.querySelectorAll('#responsive-menu > li');
-            if (x.className === "menu") {
-                x.className += " responsive";
-                lists.forEach(list => {
-                    list.style.visibility = 'visible';
-                })
-            } 
-            else {
-                x.className = "menu";
-                lists.forEach(list => {
-                    list.style.visibility = 'hidden';
-                })
-            }
-        }
+        // function displayDropdown() {
+        //     let x = document.getElementById('responsive-menu');
+        //     let lists = document.querySelectorAll('#responsive-menu > li');
+        //     if (x.className === "menu") {
+        //         x.className += " responsive";
+        //         lists.forEach(list => {
+        //             list.style.visibility = 'visible';
+        //         })
+        //     } 
+        //     else {
+        //         x.className = "menu";
+        //         lists.forEach(list => {
+        //             list.style.visibility = 'hidden';
+        //         })
+        //     }
+        // }
 
         // Project navbar links 
         function filter(e) {

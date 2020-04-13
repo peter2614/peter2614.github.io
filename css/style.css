@@ -42,6 +42,7 @@ img {
     right: 3%;
     background-color: rgba(52, 53, 55, 0.8);
     border-radius: 5px;
+    z-index: 1;
 }
 
 .fixed-nav .navbar ul {
@@ -78,10 +79,15 @@ img {
     text-shadow: none;
 }
 
-/* Navbar when screen size less than 1200px */
-.bar-icon {
+/* Scroll to top link */
+ul.menu > a {
     display: none;
 }
+
+/* Navbar when screen size less than 1200px */
+/* .bar-icon {
+    display: none;
+} */
 
 /* Header Section */
 .header-nav {
@@ -483,14 +489,24 @@ a:focus, a:hover {
 .project-row {
     display: flex;
     padding: 20px 0;
+    justify-content: space-between;
 }
 
 .project-row-size {
     flex: 1;
 }
 
+.project-row-size:first-child {
+    margin-right: 25px;
+}
+
+.project-row-size:last-child {
+    margin-left: 25px;
+}
+
 .project-content {
-    padding: 30px 25px 25px 25px;
+    /* padding: 30px 25px 25px 25px; */
+    /* box-shadow: 0px 2px 6px 2px rgba(59, 59, 59, 0.21); */
 }
 
 .project-content:hover {
@@ -510,7 +526,7 @@ a:focus, a:hover {
 .project-content p {
     font-size: 18px;
     line-height: 25px;
-    padding: 10px;
+    padding: 10px 40px;
 }
 
 .project-content a {
@@ -526,7 +542,8 @@ a:focus, a:hover {
 
 /* Contact Section */
 #contact {
-    height: 35vh;
+    height: 100vh;
+    max-height: 310px;
     display: flex;
     background: #343537;
     padding: 20px 0;
@@ -545,6 +562,15 @@ a:focus, a:hover {
 
 .social {
     padding-top: 40px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content > * {
+    flex: 1;
 }
 
 .contact-content > p {
@@ -602,56 +628,81 @@ footer {
     font-size: 1.1rem;
 }
 
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1485px) {
     /* Navbar */
-    ul.menu li:not(:first-child) {
+    .fixed-nav .navbar > ul > li {
         display: none;
     }
 
-    .fixed-nav .navbar a {
-        font-size: 20px;
-        padding: 0;
+    .scroll-to-top .navbar {
+        position: fixed;
+        bottom: 6vh;
+        right: 3vw;
+        top: auto;
     }
 
-    .fixed-nav .navbar ul {
+    .scroll-to-top .navbar > ul {
+        width: fit-content;
+        background-color: #565656;
+        padding: 8px;
+    }
+
+    .scroll-to-top .navbar > ul > a {
+        display: flex;
+        justify-content: center;
+        top: 0;
+        z-index: 1;
+        font-size: 30px;
+    }
+
+    /* ul.menu li:not(:first-child) {
+        display: none;
+    } */
+
+    /* .fixed-nav .navbar a {
+        font-size: 20px;
+        padding: 0;
+    } */
+
+    /* .fixed-nav .navbar ul {
         width: 100%;
         height: 6vh;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-    }
+    } */
 
-    .fixed-nav .navbar ul > a.bar-icon {
+    /* .fixed-nav .navbar ul > a.bar-icon {
         text-align: right;
         padding: 0 25px;
         height: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }
+    } */
 
-    .fixed-nav .navbar ul li {
+    /* .fixed-nav .navbar ul li {
         padding: 15px;
         height: 100%;
-    }
+    } */
 
-    a.bar-icon i {
+    /* a.bar-icon i {
         width: fit-content;
         height: fit-content;
         align-self: center;
-    }
+    } */
 
     /* might have to change */
-    .current {
+    /* .current {
         display: flex;
         align-items: center;
-    }
+    } */
 
-    .bar-icon {
+    /* .bar-icon {
         display: flex;
-    }
+    } */
 
-    .fixed-nav .navbar {
+    /* .fixed-nav .navbar {
         position: fixed;
         top: 0;
         right: 0;
@@ -660,7 +711,7 @@ footer {
         background-color: rgba(52, 53, 55, 0.8);
         border-radius: 0;
         z-index: 1;
-    }
+    } */
     
     /* Responsive Navbar Dropdown */
     /* .responsive {
@@ -685,6 +736,46 @@ footer {
         text-align: left;
     }  */
 
+}
+
+@media screen and (max-width: 1320px) {
+    /* Make scroll top button smaller */
+    .scroll-to-top .navbar {
+        position: fixed;
+        bottom: 6vh;
+        right: 2vw;
+        top: auto;
+    }
+}
+
+@media screen and (max-width: 1288px) {
+    /* Make scroll top button smaller */
+    .scroll-to-top .navbar {
+        position: fixed;
+        bottom: 6vh;
+        right: 1vw;
+        top: auto;
+    }
+}
+
+@media screen and (max-width: 1264px) {
+    /* Make scroll top button smaller */
+    .scroll-to-top .navbar {
+        position: fixed;
+        bottom: 6vh;
+        right: 0.3vw;
+        top: auto;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    /* Make scroll top button smaller */
+    .scroll-to-top .navbar {
+        position: fixed;
+        bottom: 5vh;
+        right: 0vw;
+        top: auto;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -756,8 +847,13 @@ footer {
         padding: 15px 0;
     }
 
+    .project-row-size:first-child,
+    .project-row-size:last-child {
+        margin: 0;
+    }
+
     .project-content {
-        padding: 30px 25px 25px 25px;
+        /* padding: 30px 25px 25px 25px; */
         width: 80vw;
         margin: auto;
     }
@@ -769,6 +865,14 @@ footer {
 
     .menu-row {
         margin: 50px 0 10px 0;
+    }
+
+    /* Make scroll top button bigger */
+    .scroll-to-top .navbar {
+        position: fixed;
+        bottom: 6vh;
+        right: 3vw;
+        top: auto;
     }
 }
 
@@ -808,5 +912,10 @@ footer {
         width:90vw;
         margin: auto;
         max-width: 680px;
+    }
+
+    #project .project-content {
+        width: 90vw;
+        margin: auto;
     }
 }
