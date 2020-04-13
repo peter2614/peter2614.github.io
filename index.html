@@ -18,15 +18,15 @@
             </div>
 
             <nav class="navbar">
-                <ul class="menu">
+                <ul class="menu" id="responsive-menu">
+                    <a href="javascript:void(0);" class="bar-icon" onclick="displayDropdown()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                     <li class="current"><a href="#cover">Home</a></li>
                     <li><a href="#me">About</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#project">Project</a></li>
-                    <a href="javascript:void(0);" class="bar-icon" onclick="displayDropdown()">
-                        <i class="fa fa-bars"></i>
-                    </a>
                 </ul>
             </nav>
         </header>
@@ -171,18 +171,33 @@
                     <div class="menu-container">
                         <div class="project-menu">
                             <ul class="menu-list">
-                                <li class="active">All</li>
-                                <li>Website</li>
-                                <li>IoT</li>
-                                <li>Android</li>
-                                <li>Chrome Extension</li>
-                                <li>Web Component</li>
+                                <li>
+                                    <a onclick="filter(this);" class="active">All</a>
+                                </li>
+                                <li>
+                                    <a onclick="filter(this);">Website</a>
+                                </li>
+                                <li>
+                                    <a onclick="filter(this);">IoT</a>
+                                </li>
+                                <li>
+                                    <a onclick="filter(this);">Android</a>
+                                </li>
+                                <li>
+                                    <a onclick="filter(this);">Chrome Extension</a>
+                                </li>
+                                <li>
+                                    <a onclick="filter(this);">Web Component</a>
+                                </li>
+                                <li>
+                                    <a onclick="filter(this);">Network</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-row">
+                <div class="project-row website">
                     <div class="project-row-size">
                         <div class="project-content">
                             <a href="projects/Countdown-Timer/index.html" rel="noopener noreferrer" target="_blank">
@@ -210,7 +225,65 @@
                     </div>
                 </div>
 
-                <div class="project-row">
+                <div class="project-row web-component">
+                    <div class="project-row-size">
+                        <div class="project-content">
+                            <a href="https://meat-space.org" rel="noopener noreferrer" target="_blank">
+                                <img src="img/projects/meatspace.png" alt="MeatSpace Image">
+                            </a>
+                            <h3>
+                                <a href="https://meat-space.org" rel="noopener noreferrer" target="_blank">MeatSpace</a>
+                            </h3>
+                            <p><b>Team Project</b> - Chrome Extension that automatically blocks popup and pre-roll ads prior to the actual video content</p>
+                            <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+
+                    <!-- need TODO -->
+                    <div class="project-row-size">
+                        <div class="project-content">
+                            <a href="https://chrome.google.com/webstore/detail/instant-dictionary/hjpcapcphfbomgjkghdiiogelgikcmpa" rel="noopener noreferrer" target="_blank">
+                                <img src="img/projects/IoT.PNG" alt="Instant Dictionary Image">
+                            </a>
+                            <h3>
+                                <a href="https://chrome.google.com/webstore/detail/instant-dictionary/hjpcapcphfbomgjkghdiiogelgikcmpa" rel="noopener noreferrer" target="_blank">Instant Dictionary</a>
+                            </h3>
+                            <p><b>Personal Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
+                            <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TODO -->
+                <!-- <div class="project-row">
+                    <div class="project-row-size">
+                        <div class="project-content">
+                            <a href="https://meat-space.org" rel="noopener noreferrer" target="_blank">
+                                <img src="img/projects/FlashbackPlayer.PNGf" alt="MeatSpace Image">
+                            </a>
+                            <h3>
+                                <a href="https://meat-space.org" rel="noopener noreferrer" target="_blank">FlashbackPlayer</a>
+                            </h3>
+                            <p><b>Team Project</b> - Chrome Extension that automatically blocks popup and pre-roll ads prior to the actual video content</p>
+                            <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+
+                    <div class="project-row-size">
+                        <div class="project-content">
+                            <a href="https://chrome.google.com/webstore/detail/instant-dictionary/hjpcapcphfbomgjkghdiiogelgikcmpa" rel="noopener noreferrer" target="_blank">
+                                <img src="img/projects/Instant Dictionary.png" alt="Instant Dictionary Image">
+                            </a>
+                            <h3>
+                                <a href="https://chrome.google.com/webstore/detail/instant-dictionary/hjpcapcphfbomgjkghdiiogelgikcmpa" rel="noopener noreferrer" target="_blank">Instant Dictionary</a>
+                            </h3>
+                            <p><b>Personal Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
+                            <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="project-row website">
                     <div class="project-row-size">
                         <div class="project-content">
                             <a href="projects/Issue-Tracker/index.html" rel="noopener noreferrer" target="_blank">
@@ -232,13 +305,14 @@
                             <h3>
                                 <a href="https://trytonsplan.herokuapp.com/" rel="noopener noreferrer" target="_blank">TrytonsPlan</a>
                             </h3>
-                            <p><b>Group Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
+                            <p><b>Team Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
                             <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-row">
+                <!-- Chrome Extension -->
+                <div class="project-row chrome-extension">
                     <div class="project-row-size">
                         <div class="project-content">
                             <a href="https://chrome.google.com/webstore/detail/ad-blocker-for-youtube/gmcmlgfecmkefmkgbbnggmamclbmikbi" rel="noopener noreferrer" target="_blank">
@@ -254,11 +328,11 @@
 
                     <div class="project-row-size">
                         <div class="project-content">
-                            <a href="" rel="noopener noreferrer" target="_blank">
+                            <a href="https://chrome.google.com/webstore/detail/instant-dictionary/hjpcapcphfbomgjkghdiiogelgikcmpa" rel="noopener noreferrer" target="_blank">
                                 <img src="img/projects/Instant Dictionary.png" alt="Instant Dictionary Image">
                             </a>
                             <h3>
-                                <a href="" rel="noopener noreferrer" target="_blank">Instant Dictionary</a>
+                                <a href="https://chrome.google.com/webstore/detail/instant-dictionary/hjpcapcphfbomgjkghdiiogelgikcmpa" rel="noopener noreferrer" target="_blank">Instant Dictionary</a>
                             </h3>
                             <p><b>Personal Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
                             <p><b>Skill Sets</b>: HTML, CSS, JavaScript</p>
@@ -268,8 +342,53 @@
             </div>
         </section>
 
+        <section id="contact">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h2>Peter Pi</h2>
+                </div>
+                
+                <div class="contact-row">
+                    <div class="contact-content">
+                        <p>Berkeley, CA 94720</p>
+                        <p>Email: <a href="mailto:peterp7799@gmail.com">peterp7799@gmail.com</a></p>
+                        <p>Phone: <a href="tel:+15104171854">+1 510 417 1854</a></p>
+                        <div class="social">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer>
-            <p>&copy Peter Pi</p>
+            <p>&copy 2020 Peter Pi</p>
         </footer>
     </div>
     <script>
@@ -287,36 +406,64 @@
         const li = document.body.querySelectorAll(".menu li");
         const responsiveNavbar = document.body.querySelectorAll(".menu > *");
 
+        // Responsive Navbar 
         window.addEventListener('resize', () => {
-            if(window.innerWidth <= 1200) {
-            //     responsiveNavbar.forEach((node) => {
-            //         if(node.classList.value === 'bar-icon' || node.classList.value === 'current') {
-            //             node.style.display = 'flex';
-            //         }
-            //         else {
-            //             node.style.display = 'none';
-            //         }
-            //     });
-            // }
-            // else {
-            //     responsiveNavbar.forEach((node) => {
-            //         if(node.classList.value === 'bar-icon' || node.classList.value === 'current') {
-            //             node.style.display = 'none';
-            //         }
-            //         else {
-            //             node.style.display = 'flex';
-            //         }
-            //     });
+            if(window.innerWidth <= 1480 && window.scrollY >= bottomOfNav) {
+                responsiveNavbar.forEach((node) => {
+                    if(node.classList.value === 'bar-icon' || node.classList.value === 'current') {
+                        node.style.display = 'flex';
+                        // node.style.visibility = 'visible';
+                    }
+                    else {
+                        node.style.display = 'none';
+                        // node.style.visibility = 'hidden';
+                    }
+                });
+            }
+            else {
+                responsiveNavbar.forEach((node) => {
+                    if(node.classList.value === 'bar-icon') {
+                        node.style.display = 'none';
+                        // node.style.visibility = 'hidden';
+                    }
+                    else {
+                        node.style.display = 'flex';
+                        // node.style.visibility = 'visible';
+                    }
+                });
             }
         });
 
+        // Fixed Navbar while scrolling
         window.addEventListener('scroll', () => {
             if(window.scrollY >= bottomOfNav) {
                 document.body.classList.add('fixed-nav');
+                if(window.innerWidth <= 1480) {
+                    responsiveNavbar.forEach((node) => {
+                        if(node.classList.value === 'bar-icon' || node.classList.value === 'current') {
+                            node.style.display = 'flex';
+                            // node.style.visibility = 'visible';
+                        }
+                        else {
+                            node.style.display = 'none';
+                            // node.style.visibility = 'hidden';
+                        }
+                    });
+                }
             }
             else {
                 // document.body.paddingTop = 0;
                 document.body.classList.remove('fixed-nav');
+                responsiveNavbar.forEach((node) => {
+                    if(node.classList.value === 'bar-icon') {
+                        node.style.display = 'none';
+                        // node.style.visibility = 'hidden';
+                    }
+                    else {
+                        node.style.display = 'flex';
+                        // node.style.visibility = 'visible';
+                    }
+                });
             }
 
             // update navbar highlight as user scroll
@@ -350,6 +497,72 @@
                 })
             }
         });
+
+        function displayDropdown() {
+            let x = document.getElementById('responsive-menu');
+            let lists = document.querySelectorAll('#responsive-menu > li');
+            if (x.className === "menu") {
+                x.className += " responsive";
+                lists.forEach(list => {
+                    list.style.visibility = 'visible';
+                })
+            } 
+            else {
+                x.className = "menu";
+                lists.forEach(list => {
+                    list.style.visibility = 'hidden';
+                })
+            }
+        }
+
+        // Project navbar links 
+        function filter(e) {
+            // remove all active class and add active class to selected node
+            let links = document.body.querySelectorAll('.menu-list li a');
+            links.forEach(link => {
+                link.classList.remove('active');
+            })
+            e.classList.add('active');
+            
+            let projectRow = document.body.querySelectorAll('.project-row');
+            switch(e.innerHTML){
+                case 'All':
+                    projectRow.forEach(node => node.style.display = 'flex');
+                    break;
+                case 'Android':
+                    projectRow.forEach(node => {
+                        node.className.includes('android') ? node.style.display = 'flex' : node.style.display = 'none';
+                    });
+                    break;
+                case 'Chrome Extension':
+                    projectRow.forEach(node => {
+                        node.className.includes('chrome-extension') ? node.style.display = 'flex' : node.style.display = 'none';
+                    });
+                    break;
+                case 'Website':
+                    projectRow.forEach(node => {
+                        node.className.includes('website') ? node.style.display = 'flex' : node.style.display = 'none';
+                    });
+                    break;
+                case 'IoT':
+                    projectRow.forEach(node => {
+                        node.className.includes('iot') ? node.style.display = 'flex' : node.style.display = 'none';
+                    });
+                    break;
+                case 'Network':
+                    projectRow.forEach(node => {
+                        node.className.includes('network') ? node.style.display = 'flex' : node.style.display = 'none';
+                    });
+                    break;
+                case 'Web Component':
+                    projectRow.forEach(node => {
+                        node.className.includes('web-component') ? node.style.display = 'flex' : node.style.display = 'none';
+                    });
+                    break;
+                default:
+                    return;
+            }
+        }
     </script>
 </body>
 </html>
