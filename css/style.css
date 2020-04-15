@@ -343,9 +343,16 @@ a:focus, a:hover {
 
 .education-container, 
 .experience-container,
-.project-container,
 .contact-container {
     width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.project-container {
+    width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -504,6 +511,7 @@ a:focus, a:hover {
 
 .project-row-size {
     flex: 1;
+    justify-content: center;
 }
 
 .project-row-size:first-child {
@@ -521,6 +529,7 @@ a:focus, a:hover {
     animation-fill-mode: both;
     animation: moveup 1s;
     padding-bottom: 20px;
+    max-width: 960px;
 }
 
 .project-content:hover {

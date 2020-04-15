@@ -211,7 +211,7 @@
                                 <a href="projects/Countdown-Timer/index.html" rel="noopener noreferrer" target="_blank">Countdown Timer</a>
                             </h3>
                             <p>
-                                <b>Personal Project</b> - A simple countdown timer web application designed for people who works at home. 
+                                <b>Personal Project</b> - A countdown timer web application designed for people who works at home. 
                                 Quick start with multiple preset time or custom time along with random soft alarms
                             </p>
                             <p><b>Technologies Used:</b> HTML, CSS, JavaScript</p>
@@ -260,10 +260,10 @@
                                 <a href="private-repo.html" rel="noopener noreferrer" target="_blank">SurfStore</a>
                             </h3>
                             <p>
-                                <b>Personal Project</b> - A cloud-based file storage application that is based on DropBox.
+                                <b>Team Project</b> - A cloud-based file storage application that is based on DropBox.
                                 Implemented both cloud services and clients that interact with the service via RPC
                             </p>
-                            <p><b>Technologies Used:</b> C++, </p>
+                            <p><b>Technologies Used:</b> C++, RPC, PicoSHA2(tiny SHA-256 Hash Generator)</p>
                         </div>
                     </div>
                 </div>
@@ -278,7 +278,7 @@
                             <h3>
                                 <a href="https://chrome.google.com/webstore/detail/ad-blocker-for-youtube/gmcmlgfecmkefmkgbbnggmamclbmikbi" rel="noopener noreferrer" target="_blank">YouTube Ad Blocker</a>
                             </h3>
-                            <p><b>Personal Project</b> - Chrome Extension that automatically blocks popup and pre-roll ads prior to the actual video content</p>
+                            <p><b>Personal Project</b> - A Chrome Extension that automatically blocks popup and pre-roll ads prior to the actual video content</p>
                             <p><b>Technologies Used:</b> HTML, CSS, JavaScript</p>
                         </div>
                     </div>
@@ -291,7 +291,7 @@
                             <h3>
                                 <a href="https://chrome.google.com/webstore/detail/instant-dictionary/hjpcapcphfbomgjkghdiiogelgikcmpa" rel="noopener noreferrer" target="_blank">Instant Dictionary</a>
                             </h3>
-                            <p><b>Personal Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
+                            <p><b>Personal Project</b> - A Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
                             <p><b>Technologies Used:</b> HTML, CSS, JavaScript</p>
                         </div>
                     </div>
@@ -324,8 +324,9 @@
                                 <a href="private-repo.html" rel="noopener noreferrer" target="_blank">Micro-climate IoT Device</a>
                             </h3>
                             <p>
-                                <b>Personal Project</b> - An open source Web Component library
-                                Currently support meat-button, meat-card, meat-input, and meat-link
+                                <b>Personal Project</b> - IoT devices (ESP32 and DHT22 Sensor) that measures temperature and humidity.
+                                Implemented both front-end UI and back-end Web API to receive and store data from devices.
+                                Created a thermal map that presents the warmest/coolest paths across UCSD campus
                             </p>
                             <p><b>Technologies Used:</b> Embedded C, HTML, CSS, JavaScript, AJAX, Node.js, Express, MySQL, Google Maps API</p>
                         </div>
@@ -342,8 +343,11 @@
                             <h3>
                                 <a href="projects/Issue-Tracker/index.html" rel="noopener noreferrer" target="_blank">Issue Tracker</a>
                             </h3>
-                            <p><b>Personal Project</b> - </p>
-                            <p><b>Technologies Used:</b>: HTML, CSS, JavaScript</p>
+                            <p>
+                                <b>Personal Project</b> - A simple issue tracker web application that contains input fields of Description, Severity and Assigned To.
+                                The issues are stored in the Browser's local storage and printed out at the bottom area
+                            </p>
+                            <p><b>Technologies Used:</b> HTML, CSS, JavaScript</p>
                         </div>
                     </div>
 
@@ -355,8 +359,12 @@
                             <h3>
                                 <a href="https://trytonsplan.herokuapp.com/" rel="noopener noreferrer" target="_blank">TrytonsPlan</a>
                             </h3>
-                            <p><b>Team Project</b> - Chrome Extension that allows user to view both English and Chinese definitions by selecting any text as you browse the web</p>
-                            <p><b>Technologies Used:</b> HTML, CSS, JavaScript</p>
+                            <p>
+                                <b>Team Project</b> - A web application that allows user to add any course they want to take and generate all possible schedules.
+                                The application also provides different sorting algorithms, such as highest average GPA, highest Professor score, minimum study hours, and minimum gap between classes.
+                                The user can also filter the result by specifying the minimum/maximum units or the timeframe
+                            </p>
+                            <p><b>Technologies Used:</b> React, Bootstrap, HTML, CSS, JavaScript</p>
                         </div>
                     </div>
                 </div>
@@ -558,7 +566,15 @@
             let projectRow = document.body.querySelectorAll('.project-row');
             switch(e.innerHTML){
                 case 'All':
-                    projectRow.forEach(node => node.style.display = 'flex');
+                    projectRow.forEach(node => {
+                        node.style.display = 'flex'
+                        if(node.className.includes('iot')) {
+                            node.children[0].style.marginRight = '25px';
+                            node.children[0].style.display = 'flex';
+                            node.children[1].style.marginLeft = '25px';
+                            node.children[1].style.display = 'flex';
+                        }
+                    });
                     break;
                 case 'Android':
                     projectRow.forEach(node => {
@@ -577,7 +593,6 @@
                     break;
                 case 'IoT':
                     projectRow.forEach(node => {
-                        console.log(node.children[0].children[0])
                         if(node.className.includes('iot')) {
                             node.style.display = 'flex';
                             node.children[1].style.margin = 'auto';
