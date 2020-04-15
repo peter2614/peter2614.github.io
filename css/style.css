@@ -192,23 +192,33 @@ li > a {
 #intro {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     height: 100%;
-    padding: 30px;
+    padding: 200px 30px;
 }
 
 #intro > h1 {
     margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 3.5rem;
+    margin-bottom: 5vh;
+    font-size: 50px;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+    animation: moveup 1s;
 }
 
 #intro > h2 {
-    font-size: 3rem;
+    font-size: 50px;
+    margin-bottom: 5vh;
+    animation-delay: 0.8s;
+    animation-fill-mode: both;
+    animation: moveup 1s;
 }
 
 #intro > p {
-    font-size: 2.2rem;
+    font-size: 50px;
+    animation-delay: 1.6s;
+    animation-fill-mode: both;
+    animation: moveup 1s;
 }
 
 /* About Me Section */
@@ -507,6 +517,9 @@ a:focus, a:hover {
 .project-content {
     /* padding: 30px 25px 25px 25px; */
     /* box-shadow: 0px 2px 6px 2px rgba(59, 59, 59, 0.21); */
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    animation: moveup 1s;
 }
 
 .project-content:hover {
@@ -653,6 +666,15 @@ footer {
         top: 0;
         z-index: 1;
         font-size: 30px;
+    }
+    
+    .scroll-to-top .navbar > ul > a,
+    .scroll-to-top .navbar > ul > a:hover,
+    .scroll-to-top .navbar > ul > a::before, 
+    .scroll-to-top .navbar > ul > a::after,
+    .scroll-to-top .navbar > ul > a > i {
+        transition: none;
+        -webkit-transition: none;
     }
 
     /* ul.menu li:not(:first-child) {
@@ -844,7 +866,7 @@ footer {
     }
 
     .project-row-size {
-        padding: 15px 0;
+        padding: 25px 0;
     }
 
     .project-row-size:first-child,
@@ -856,6 +878,7 @@ footer {
         /* padding: 30px 25px 25px 25px; */
         width: 80vw;
         margin: auto;
+        padding-bottom: 20px;
     }
 
     /* Project Section ::after */
@@ -917,5 +940,34 @@ footer {
     #project .project-content {
         width: 90vw;
         margin: auto;
+    }
+}
+
+
+@-webkit-keyframes moveup {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+  
+@keyframes moveup {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
     }
 }
