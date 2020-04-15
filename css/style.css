@@ -520,6 +520,7 @@ a:focus, a:hover {
     animation-delay: 0.5s;
     animation-fill-mode: both;
     animation: moveup 1s;
+    padding-bottom: 20px;
 }
 
 .project-content:hover {
@@ -878,7 +879,6 @@ footer {
         /* padding: 30px 25px 25px 25px; */
         width: 80vw;
         margin: auto;
-        padding-bottom: 20px;
     }
 
     /* Project Section ::after */
@@ -940,6 +940,13 @@ footer {
     #project .project-content {
         width: 90vw;
         margin: auto;
+    }
+}
+
+/* On mobile device, hide navbar on top (for now) */
+@media screen and (max-width: 730px) {
+    #responsive-menu li {
+        display: none;
     }
 }
 
