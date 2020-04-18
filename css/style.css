@@ -455,14 +455,6 @@ a:focus, a:hover {
     padding-bottom: 30px;
 }
 
-.project-title h3::after {
-    display: block;
-    background: url(../img/icon/title.png) no-repeat;
-    height: 5px;
-    content: "";
-    margin-top: 20px;
-}
-
 .menu-container {
     flex: 2;
 }
@@ -888,11 +880,6 @@ footer {
         /* padding: 30px 25px 25px 25px; */
         width: 80vw;
         margin: auto;
-    }
-
-    /* Project Section ::after */
-    .project-title h3::after {
-        display: none;
     }
 
     .menu-row {
